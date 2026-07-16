@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+}
+
+@font-face {
+  font-family: oswald;
+  src: url("../fonts/Oswald-Light.ttf");
+}
+
+body {
+  font-family: oswald, sans-serif;
+  background-color: #ddeefc;
+}
+
+/* *************** VISA CARD *************** */
+.visa-card {
+  width: 90%;
+  height: 255px;
+  border-radius: 15px;
+  margin: 50px auto;
+  position: relative;
+  background-image: url("../images/visaCard.avif");
+  background-size: cover;
+  background-position: bottom;
+  box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.5);
+
+  > #card-number {
+    width: 80%;
+    height: 60px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 22px;
+    > .card-number-name {
+      font-size: 17px;
+    }
+    > .card-number-write {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  > .card-holder-exp {
+    width: 80%;
+    height: 55px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    > #card-holder {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > .card-holder-name {
+        font-size: 17px;
+      }
+      > .card-holder-write {
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    > #card-expiration {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > .card-exp-name {
+        font-size: 17px;
+      }
+      > .card-exp-write {
+        display: flex;
+        font-size: 20px;
+        > * {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .visa-card-reverse {
+    display: none;
+    width: 100%;
+    height: 255px;
+    border-radius: 15px;
+    position: absolute;
+    background-image: url("../images/visaCard.avif");
+    background-size: cover;
+    background-position: top;
+    > .line {
+      width: 100%;
+      height: 50px;
+      margin-top: 50px;
+      background-color: rgba(0, 0, 0, 0.737);
+    }
+    > .visa-card-cvv2 {
+      transform: rotateY(180deg);
+      width: 150px;
+      height: 60px;
+      position: absolute;
+      top: 60%;
+      right: 5%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > .visa-card-cvv2-name {
+        font-size: 17px;
+      }
+      > .visa-card-cvv2-write {
+        font-size: 20px;
+        width: 50%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/* *************** VISA CARD INFO *************** */
+.visa-card-info {
+  background-color: white;
+  border-radius: 50px;
+  width: 50%;
+  height: 600px;
+  margin: -240px auto;
+  display: flex;
+
+  > form {
+    width: 100%;
+    height: 70%;
+    margin-top: 30%;
+    > div {
+      margin: 20px 30px;
+      > input {
+        height: 45px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.column-inp {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-inp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div {
+    height: 50px;
+
+    > label {
+      margin-right: 10px;
+    }
+
+    > select {
+      width: 80px;
+      height: 45px;
+      font-family: oswald, sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+      color: rgb(94, 94, 94);
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding-left: 10px;
+    }
+
+    .expiration-inp {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    > #card-info-year {
+      margin-right: 10px;
+    }
+
+    > input {
+      height: 45px;
+    }
+  }
+}
+
+#submit-inp {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  > input {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #0349b9;
+    color: #ddeefc;
+  }
+}
+
+#submit-inp > input:focus {
+  background-color: #ddeefc;
+  color: #0349b9;
+}
+
+input {
+  font-family: oswald, sans-serif;
+  font-size: 19px;
+  color: rgb(94, 94, 94);
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+input:focus {
+  border: 1.5px solid #0349b9;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* *************** @media *************** */
+@media all and (max-width: 767px) {
+  .visa-card-info {
+    margin: -110px auto;
+    width: 80%;
+  }
+
+  .expiration-inp {
+    width: 100%;
+    height: 150px !important;
+    display: flex;
+    margin-top: -20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .cvv2-inp {
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .visa-card-info {
+    margin: -150px auto;
+  }
+
+  .cvv2-inp {
+    margin-top: 15px;
+  }
+
+  .visa-card {
+    width: 60%;
+    height: 280px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .visa-card {
+    width: 55%;
+    height: 400px;
+  }
+}

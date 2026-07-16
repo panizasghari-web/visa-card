@@ -31,9 +31,8 @@ An interactive Visa Card built with **HTML**, **CSS**, and **JavaScript**.
 
 ## 🚀 How to Run
 
-1. Clone the repository
-
 https://panizasghari-web.github.io/visa-card/
+
 
 ## 📚 What I Learned
 

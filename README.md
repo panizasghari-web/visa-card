@@ -44,4 +44,4 @@ https://panizasghari-web.github.io/visa-card/
 
 ## 👩‍💻 Author
 
-Developed by **Paniz Asghari**
+Developed by <ins>Paniz Asghari</ins>
